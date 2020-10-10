@@ -19,11 +19,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
-//mongodb+srv://yelpcamp:zied24934500@cluster0.rysp3.mongodb.net/<dbname>?retryWrites=true&w=majority
-//mongodb://localhost:27017/yelp_camp
+
 mongoose
   .connect(
-    "mongodb+srv://yelpcamp:zied24934500@cluster0.rysp3.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "mongodb://localhost:27017/yelp_camp",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
